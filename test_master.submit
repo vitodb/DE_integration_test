@@ -1,0 +1,8 @@
+#  A test Condor submission file - mytest.submit
+executable = /bin/hostname
+universe = vanilla
++DESIRED_Sites = "ITB_FC_CE2"
+log = test.log
+output = test.out.$(Cluster).$(Process)
+error = test.err.$(Cluster).$(Process)
+queue 1
